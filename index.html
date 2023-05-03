@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Ahorcado</title>
+<script src="./js/ahorcado.js"></script>
+<link rel="stylesheet" href="./css/ahorcado.css">
+<link rel="shortcut icon" href="./foto/favicon.png">
+</head>
+<body>
+<center><h1><b>Juego del ahorcado | Floofz</b></h1></center>
+<hr>
+<br>
+<form name=visor>
+   <center>
+   <table width=600>
+   <tr>
+      <td colspan=3 width=150 align=center><textarea name=displayHombre cols=15 rows=6 id="hombre"></textarea>
+      <td colspan=3 width=150 align=center><textarea name=displayLetras cols=15 rows=6 id="letras"></textarea>
+      <td width=200>
+   <tr>
+      <td colspan=6 width=300 align=center><input name=displayPalabra size=42 id="meow" >
+      <td ALIGN=center>&nbsp;
+   <tr>
+      <td align=center width=50><input type=button name=botA value=" A " onClick="Juega(this.form, 'a'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center width=50><input type=button name=botB value=" B " onClick="Juega(this.form, 'b'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center width=50><input type=button name=botC value=" C " onClick="Juega(this.form, 'c'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center width=50><input type=button name=botD value=" D " onClick="Juega(this.form, 'd'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center width=50><input type=button name=botE value=" E " onClick="Juega(this.form, 'e'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center width=50><input type=button name=botF value=" F " onClick="Juega(this.form, 'f'); this.disabled = true;this.classList.add('pulsado');">
+      <td>
+	  	  <br>
+    <tr>
+      <td align=center><input type=button name=botG value=" G " onClick="Juega(this.form, 'g'); this.disabled = true; this.classList.add('pulsado');">
+      <td align=center><input type=button name=botH value=" H " onClick="Juega(this.form, 'h'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botI value=" I " onClick="Juega(this.form, 'i'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botJ value=" J " onClick="Juega(this.form, 'j'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botK value=" K " onClick="Juega(this.form, 'k'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botL value=" L " onClick="Juega(this.form, 'l'); this.disabled = true;this.classList.add('pulsado');">
+	  <td>
+	  <td>
+	   <td>
+	  <td>
+	   <td>
+	  <td>
+	  <td>
+	    <td>
+		 <td>
+	  <td>
+	   <td>
+	  <td>
+      <td align=right valign=middle><input type=text name=ganadas size=4 value=0 readonly="true" id="meow" >
+	  <td><b><h2>Ganadas</h2></b></td>
+    <tr>
+      <td align=center><input type=button name=botM value=" M " onClick="Juega(this.form, 'm'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botN value=" N " onClick="Juega(this.form, 'n'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botÑ value=" Ñ " onClick="Juega(this.form, 'ñ'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botO value=" O " onClick="Juega(this.form, 'o'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botP value=" P " onClick="Juega(this.form, 'p'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botQ value=" Q " onClick="Juega(this.form, 'q'); this.disabled = true;this.classList.add('pulsado');">
+	  <td>
+	    <td>
+		 <td>
+	  <td>
+	   <td>
+	  <td>
+	  <td>
+	    <td>
+		 <td>
+	  <td>
+	   <td>
+	  <td>
+      <td align=right valign=right><input type=text name=perdidas size=4 value=0 readonly="true" id="meow" >
+	  <td><b><h2>Perdidas</h2></b></td>
+    <tr>
+      <td align=center><input type=button name=botR value=" R " onClick="Juega(this.form, 'r'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botS value=" S " onClick="Juega(this.form, 's'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botT value=" T " onClick="Juega(this.form, 't'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botU value=" U " onClick="Juega(this.form, 'u'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botV value=" V " onClick="Juega(this.form, 'v'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botW value=" W " onClick="Juega(this.form, 'w'); this.disabled = true;this.classList.add('pulsado');">
+      <td>
+    <tr>
+      <td align=center><input type=button name=botX value=" X " onClick="Juega(this.form, 'x'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botY value=" Y " onClick="Juega(this.form, 'y'); this.disabled = true;this.classList.add('pulsado');">
+      <td align=center><input type=button name=botZ value=" Z " onClick="Juega(this.form, 'z'); this.disabled = true;this.classList.add('pulsado');">
+      <td colspan=3 align=center><input type=button name=Inicia value="Juego nuevo" onClick="IniciaJuego(this.form); resetearBotones();">
+	  <td>
+	    <td>
+		 <td>
+	  <td>
+	   <td>
+	  <td>
+	  <td>
+	    <td>
+		 <td>
+	  <td>
+	   <td>
+	  <td>
+      <td align=center><input type=button value=Limpiar name=B1 onClick="this.form.ganadas.value='0'; this.form.perdidas.value='0'">
+  </table>
+  </center>
+</form>
+
+</body>
+<br><br><br><br><br><hr><br>
+<footer>
+<center>
+<h3>
+[<a href="index.html">Volver</a>]
+</h3>
+</center>
+</footer>
+</html>
